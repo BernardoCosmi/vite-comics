@@ -87,28 +87,37 @@ export default {
 
 .container {
   display: flex;
-  margin: 10px auto;
+  margin: 0 auto;
   width: 80vw;
   justify-content: space-between;
   align-items: center;
+}
+img{
+  width: 90px;
+  height: 90px;
 }
 
 ul {
   list-style-type: none;
   display: flex;
-  gap: 20px;
+  column-gap: 20px;
+  height: 100px;
 
   li {
     text-transform: uppercase;
     font-size: small;
     font-size: 900;
-    height: 115px;
+    height: 100%;
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
 
     a {
       text-decoration: none;
       color: black;
+      margin: 0;
+      padding: 0;
     }
   }
 }
