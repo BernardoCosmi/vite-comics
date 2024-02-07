@@ -21,4 +21,8 @@ export default {
 
 <style lang="scss">
 @use "./styles/general.scss";
+
+body{
+    margin:0;
+}
 </style>

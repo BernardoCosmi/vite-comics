@@ -1,5 +1,4 @@
 <script>
-// import
 
 export default {
   name: "AppBody",
@@ -20,8 +19,9 @@ export default {
 @use "../styles/partials/mixins" as *;
 
 .container{
-  width: 100vw;
+  width: 100%;
   background: #1C1C1C;
+
   div{
     width: 80%;
     margin: 10px auto;
