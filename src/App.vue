@@ -21,6 +21,7 @@ export default {
     <AppBody/>
     <AppLinks/>
     <AppContacts/>
+    <AppFooter/>
 </template>
 
 <style lang="scss">
