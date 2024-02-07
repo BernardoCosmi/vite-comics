@@ -1,7 +1,64 @@
 <script>
 export default {
   name: "AppHeader",
+  data(){
+    return{
+      ArrayLinksMenu: [
+        {
+          title: 'characters',
+          link:'#',
+          active: false
+        },
+        {
+          title: 'comics',
+          link:'#',
+          active:false
+        },
+        {
+          title: 'movies',
+          link:'#',
+          active:false
+        },
+        {
+          title: 'tv',
+          link:'#',
+          active:false
+        },
+        {
+          title: 'games',
+          link:'#',
+          active:false
+        },
+        {
+          title: 'collectibles',
+          link:'#',
+          active:false
+        },
+        {
+          title: 'videos',
+          link:'#',
+          active:false
+        },
+        {
+          title: 'fans',
+          link:'#',
+          active:false
+        },
+        {
+          title:'news',
+          link:'#',
+          active:false
+        },
+        {
+          title:'shop',
+          link: '#',
+          active:false
+        },
+      ]
+    }
+  }
 };
+
 
 </script>
 
@@ -15,27 +72,12 @@ export default {
     <!-- Menu -->
     <div>
       <ul>
-        <li>
-          <span>characters</span>
+        <li v-for="(element, index) in ArrayLinksMenu">
+          <a :href="element.link">{{element.title}}</a>
         </li>
-        <li>
-          <span>comics</span>
-        </li>
-        <li>
-          <span>movies</span>
-        </li>
-        <li>
-          <span>tv</span>
-        </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
       </ul>
     </div>
-    
+
   </div>
 </template>
 
@@ -43,15 +85,31 @@ export default {
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
-.container{
+.container {
   display: flex;
+  margin: 10px auto;
   width: 80vw;
-  margin: auto;
   justify-content: space-between;
-}
-ul{
-  list-style-type: none;
-  display: flex;
+  align-items: center;
 }
 
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+
+  li {
+    text-transform: uppercase;
+    font-size: small;
+    font-size: 900;
+    height: 115px;
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
 </style>
