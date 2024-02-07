@@ -24,7 +24,7 @@ export default {
 
   div{
     width: 80%;
-    margin: 10px auto;
+    margin: auto;
     height: 150px;
     text-align: start;
     display: flex;

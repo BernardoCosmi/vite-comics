@@ -17,6 +17,7 @@ export default {
 <template>
     <AppHeader/>
     <AppBody/>
+    <AppLinks/>
 </template>
 
 <style lang="scss">
