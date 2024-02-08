@@ -109,7 +109,7 @@ ul {
   li {
     text-transform: uppercase;
     font-size: small;
-    font-size: 900;
+    font-weight: bold;
     height: 100%;
     display: flex;
     align-items: center;

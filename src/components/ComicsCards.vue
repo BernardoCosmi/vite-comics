@@ -36,7 +36,7 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 50px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 .comic-card {
     padding: 2px;
@@ -46,7 +46,7 @@ export default {
     row-gap: 5px;
     &:hover{
         border: 2px solid white;
-        scale: 0.98;
+        scale: 1.15;
     }
     &:hover p{
         color: white;
