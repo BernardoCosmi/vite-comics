@@ -19,6 +19,9 @@ export default {
     <div class="jumbotron">
 
     </div>
+    <span>
+      
+    </span>
     <div class="cards-container">
       <ComicsCards :comics="comics" />
     </div>

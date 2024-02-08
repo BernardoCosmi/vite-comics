@@ -1,45 +1,82 @@
 <script>
 export default {
-  props: {
-    comics: {
-      type: Array,
-      required: true
+    props: {
+        comics: {
+            type: Array,
+            required: true
+        }
     }
-  }
 };
 </script>
 
 <template>
-  <div>
-    <div class="comics-list">
-      <div v-for="(comic, index) in comics" :key="index" class="comic-card">
-        <img :src="comic.thumb" :alt="comic.series" class="comic-thumb">
-        <div class="comic-details">
-          <h3>{{ comic.series }}</h3>
-          <p>Type: {{ comic.type }}</p>
-          <p>Price: {{ comic.price }}</p>
+    <div>
+        <div class="comics-list">
+            <div v-for="(comic, index) in comics" :key="index" class="comic-card">
+                <div class="comic-thumb">
+                    <figure class="comic-thumb">
+                        <img :src="comic.thumb" :alt="comic.series">
+                    </figure>
+                    <h4>{{ comic.series }}</h4>
+                </div>
+
+                <div class="comic-details">
+                    <p>{{ comic.type }}</p>
+                    <p>{{ comic.price }}</p>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <style lang="scss" scoped>
 .comics-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+    margin-bottom: 20px;
 }
-
 .comic-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+    padding: 2px;
+    width: calc(90%/6);
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    &:hover{
+        border: 2px solid white;
+        scale: 0.98;
+    }
+    &:hover p{
+        color: white;
+    }
 }
-
 .comic-thumb {
-  width: 100px;
-  height: auto;
-  margin-right: 10px;
+    figure{
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+        }
+    }
 }
-</style>
+h4 {
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.comic-details {
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    p {
+        color: grey;
+        text-transform: capitalize;
+    }
+}</style>
