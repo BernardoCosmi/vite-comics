@@ -104,7 +104,7 @@ ul {
   column-gap: 20px;
   height: 100px;
   margin: 0;    
-  margin-bottom: 5px;
+
 
   li {
     text-transform: uppercase;

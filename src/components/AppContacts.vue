@@ -91,7 +91,8 @@ export default {
 h3{
     color: white;
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    margin-top: 20px;
 }
 ul{
     display: flex;
