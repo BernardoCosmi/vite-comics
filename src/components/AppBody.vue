@@ -1,17 +1,29 @@
 <script>
+import ComicsCards from "./ComicsCards.vue";
+import comicsData from "../../dc-comics.json";
 
 export default {
-  name: "AppBody",
+  components: {
+    ComicsCards
+  },
+  data() {
+    return {
+      comics: comicsData
+    };
+  }
 };
 </script>
 
 <template>
   <div class="container">
-    <div>
-        <h1> &rarr; Content goes here &larr;</h1>
-    </div>
+    <div class="jumbotron">
 
+    </div>
+    <div class="cards-container">
+      <ComicsCards :comics="comics" />
+    </div>
   </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -19,19 +31,12 @@ export default {
 @use "../styles/partials/mixins" as *;
 
 .container{
-  width: 100%;
-  background: #1C1C1C;
-
-  div{
-    width: 80%;
-    margin: auto;
-    height: 150px;
-    text-align: start;
-    display: flex;
-    align-items: center;
-  }
+    background: #1C1C1C;
 }
-h1{
-  color: white;
+.cards-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
 }
 </style>
