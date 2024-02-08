@@ -63,7 +63,7 @@ export default {
 .cards-container {
   width: 80%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   span{
@@ -72,6 +72,7 @@ export default {
     font-weight: bold;
     text-transform: uppercase;
     background-color: #0282F9 ;
+    margin-top: 20px;
     padding: 10px 40px;
   }
 }
