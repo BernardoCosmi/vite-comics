@@ -117,6 +117,10 @@ ul {
     &:hover{
       border-bottom: 5px solid #0282F9;
     }
+    &:hover a{
+      color: #0282F9;
+      padding-top: 5px;
+    }
 
     a {
       text-decoration: none;
