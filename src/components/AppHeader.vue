@@ -1,58 +1,58 @@
 <script>
 export default {
   name: "AppHeader",
-  data(){
-    return{
+  data() {
+    return {
       ArrayLinksMenu: [
         {
           title: 'characters',
-          link:'#',
+          link: '#',
           active: false
         },
         {
           title: 'comics',
-          link:'#',
-          active:false
+          link: '#',
+          active: false
         },
         {
           title: 'movies',
-          link:'#',
-          active:false
+          link: '#',
+          active: false
         },
         {
           title: 'tv',
-          link:'#',
-          active:false
+          link: '#',
+          active: false
         },
         {
           title: 'games',
-          link:'#',
-          active:false
+          link: '#',
+          active: false
         },
         {
           title: 'collectibles',
-          link:'#',
-          active:false
+          link: '#',
+          active: false
         },
         {
           title: 'videos',
-          link:'#',
-          active:false
+          link: '#',
+          active: false
         },
         {
           title: 'fans',
-          link:'#',
-          active:false
-        },
-        {
-          title:'news',
-          link:'#',
-          active:false
-        },
-        {
-          title:'shop',
           link: '#',
-          active:false
+          active: false
+        },
+        {
+          title: 'news',
+          link: '#',
+          active: false
+        },
+        {
+          title: 'shop',
+          link: '#',
+          active: false
         },
       ]
     }
@@ -70,10 +70,10 @@ export default {
     </div>
 
     <!-- Menu -->
-    <div>
+    <div class="menu-container">
       <ul>
         <li v-for="(element, index) in ArrayLinksMenu">
-          <a :href="element.link">{{element.title}}</a>
+          <a :href="element.link">{{ element.title }}</a>
         </li>
       </ul>
     </div>
@@ -92,7 +92,8 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-img{
+
+img {
   width: 90px;
   height: 90px;
 }
@@ -102,6 +103,8 @@ ul {
   display: flex;
   column-gap: 20px;
   height: 100px;
+  margin: 0;    
+  margin-bottom: 5px;
 
   li {
     text-transform: uppercase;
@@ -110,8 +113,10 @@ ul {
     height: 100%;
     display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
+
+    &:hover{
+      border-bottom: 5px solid #0282F9;
+    }
 
     a {
       text-decoration: none;
@@ -120,5 +125,4 @@ ul {
       padding: 0;
     }
   }
-}
-</style>
+}</style>
